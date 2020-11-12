@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-demo
+  template:
+    metadata:
+      labels:
+        app: cloud-demo
+    spec:
+      containers:
+        - name: cloud-demo
+          image: in2dataregistry.azurecr.io/cloud-demo:5
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8080

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cloud-demo
-          image: in2dataregistry.azurecr.io/cloud-demo:5
+          image: in2dataregistry.azurecr.io/cloud-demo
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8080

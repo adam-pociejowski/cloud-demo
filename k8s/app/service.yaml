@@ -5,8 +5,13 @@ metadata:
   labels:
     app: cloud-demo
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 8080
   selector:
     app: cloud-demo
+#  type: ClusterIP
+#  ports:
+#    - port: 8080
+#  selector:
+#    app: cloud-demo
